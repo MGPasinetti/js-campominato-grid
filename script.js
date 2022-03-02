@@ -23,33 +23,21 @@ const btnPlay = document.getElementById(`play`);
 
 btnPlay.addEventListener('click', play);
 
-// function play() {
-//     if ()
-// }
+function play() {
+    const selection = document.getElementById(`difficulty`);
 
-
-// Genero la griglia di difficoltà 1
-const grid1 = generateListNumsBetween(1, 100);
-
-// Genero la griglia di difficoltà 2
-// const grid2 = generateListNumsBetween(1, 81);
-
-// Genero la griglia di difficoltà 3
-// const grid3 = generateListNumsBetween(1, 49);
-
-
-
-
-
-// FUNCTIONS:
-function generateListNumsBetween(min, max) {
-    for (let min = 1; min <= max; min++) {
-        grid.innerHTML += `<div class="box box-${max}">${min}</div>`
+    if (selection.value == `difficulty_1`) {
+        const grid1 = generateListNumsBetween(1, 100);
+    } else if (selection.value == `difficulty_2`) {
+        const grid2 = generateListNumsBetween(1, 81);
+    } else {
+        const grid3 = generateListNumsBetween(1, 49);
     }
-}
 
-// function selectOption() {
-//     var difficulty = getElementById(`difficulty`);
-//     var displayText = difficulty.options[difficulty.selectedIndex].text;
-    
-// }
+    function generateListNumsBetween(min, max) {
+        for (let min = 1; min <= max; min++) {
+            grid.innerHTML += `<div class="box box-${max}">${min}</div>`
+        }
+    }
+
+}
