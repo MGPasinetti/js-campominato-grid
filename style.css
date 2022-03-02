@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 6rem;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    background-color: #7FFFD4;
+    height: 900px;
+}
