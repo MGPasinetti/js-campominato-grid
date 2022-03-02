@@ -19,15 +19,20 @@ let grid = document.createElement(`div`);
 grid.className = "grid";
 container.append(grid);
 
+const btnPlay = document.getElementById(`play`);
+
+btnPlay.addEventListener('click', play);
+
+// function play() {
+//     if ()
+// }
 
 
 // Genero la griglia di difficoltà 1
 const grid1 = generateListNumsBetween(1, 100);
 
-
 // Genero la griglia di difficoltà 2
 // const grid2 = generateListNumsBetween(1, 81);
-
 
 // Genero la griglia di difficoltà 3
 // const grid3 = generateListNumsBetween(1, 49);
@@ -35,9 +40,16 @@ const grid1 = generateListNumsBetween(1, 100);
 
 
 
+
 // FUNCTIONS:
 function generateListNumsBetween(min, max) {
     for (let min = 1; min <= max; min++) {
-        grid.innerHTML += `<div class="box">${min}</div>`
+        grid.innerHTML += `<div class="box box-${max}">${min}</div>`
     }
 }
+
+// function selectOption() {
+//     var difficulty = getElementById(`difficulty`);
+//     var displayText = difficulty.options[difficulty.selectedIndex].text;
+    
+// }
