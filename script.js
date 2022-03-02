@@ -13,13 +13,31 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 */
 
-// Genero la griglia di difficoltà 1:
+// Appendo un elemento html con la griglia corretta in base alla scelta dell'utente
+let container = document.querySelector(`main`);
+let grid = document.createElement(`div`);
+grid.className = "grid";
+container.append(grid);
+
+
+
+// Genero la griglia di difficoltà 1
 const grid1 = generateListNumsBetween(1, 100);
+
+
+// Genero la griglia di difficoltà 2
+// const grid2 = generateListNumsBetween(1, 81);
+
+
+// Genero la griglia di difficoltà 3
+// const grid3 = generateListNumsBetween(1, 49);
+
+
 
 
 // FUNCTIONS:
 function generateListNumsBetween(min, max) {
     for (let min = 1; min <= max; min++) {
-        console.log(min);
+        grid.innerHTML += `<div class="box">${min}</div>`
     }
 }
