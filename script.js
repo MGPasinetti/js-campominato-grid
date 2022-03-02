@@ -13,3 +13,13 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 */
 
+// Genero la griglia di difficoltà 1:
+const grid1 = generateListNumsBetween(1, 100);
+
+
+// FUNCTIONS:
+function generateListNumsBetween(min, max) {
+    for (let min = 1; min <= max; min++) {
+        console.log(min);
+    }
+}
