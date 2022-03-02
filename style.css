@@ -20,5 +20,23 @@ header div {
 
 main {
     background-color: #7FFFD4;
-    height: 3000px;
+    padding: 6rem 0;
+}
+
+.grid {
+    width: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+.box {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7FFFD4;
+    border: 1px solid black;
 }
