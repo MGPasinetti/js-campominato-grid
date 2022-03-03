@@ -13,31 +13,72 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 */
 
-// Appendo un elemento html con la griglia corretta in base alla scelta dell'utente
-let container = document.querySelector(`main`);
-let grid = document.createElement(`div`);
-grid.className = "grid";
-container.append(grid);
 
+// let container = document.querySelector(`main`);
+// let grid = document.createElement(`div`);
+// grid.className = "grid";
+// container.append(grid);
+
+// const btnPlay = document.getElementById(`play`);
+
+// btnPlay.addEventListener('click', play);
+
+// function play() {
+//     const selection = document.getElementById(`difficulty`);
+    
+//     if (selection.value == `difficulty_1`) {
+//         const grid1 = generateListNumsBetween(1, 100);
+//     } else if (selection.value == `difficulty_2`) {
+//         const grid2 = generateListNumsBetween(1, 81);
+//     } else {
+//         const grid3 = generateListNumsBetween(1, 49);
+//     }
+
+//     function generateListNumsBetween(min, max) {
+//         grid.innerHTML = ``;
+
+//         for (let min = 1; min <= max; min++) {
+//             grid.innerHTML += `<div class="box box-${max}">${min}</div>`;
+//         }
+
+//     }
+// }
+
+
+const eleLevel = document.getElementById(`level`);
 const btnPlay = document.getElementById(`play`);
+const eleGrid = document.querySelector(`.grid`);
 
-btnPlay.addEventListener('click', play);
+btnPlay.addEventListener(`click`, setupGame);
 
-function play() {
-    const selection = document.getElementById(`difficulty`);
+arrLevels = [100, 81, 49];
 
-    if (selection.value == `difficulty_1`) {
-        const grid1 = generateListNumsBetween(1, 100);
-    } else if (selection.value == `difficulty_2`) {
-        const grid2 = generateListNumsBetween(1, 81);
-    } else {
-        const grid3 = generateListNumsBetween(1, 49);
-    }
+function setupGame() {
+    eleGrid.innerHTML = ``;
+    // selezionare il livello 
+    const indexLevel = parseInt(eleLevel.value);
+    console.log(`indexLevel`, indexLevel);
+    const cellsCount = arrLevels[indexLevel];
+    console.log(`cellsCount`, cellsCount);
+    const cellsPerRow = Math.sqrt(cellsCount);
 
-    function generateListNumsBetween(min, max) {
-        for (let min = 1; min <= max; min++) {
-            grid.innerHTML += `<div class="box box-${max}">${min}</div>`
-        }
-    }
+    for (let cellNum = 1; cellNum <= cellsCount; cellNum++) {
+        const eleCell = document.createElement(`div`);
+        eleCell.classList.add(`cell`);
+        // eleCell.append(cellNum); // metodo 1
+        eleCell.innerHTML = cellNum; // metodo 2
+        eleCell.style.width = `calc(100% / ${cellsPerRow})`;
+        eleCell.style.height = `calc(100% / ${cellsPerRow})`;
+        eleCell.addEventListener(`click`, () => {console.log(this)}); // TODO: 
+        eleGrid.append(eleCell);
 
+        console.log(cellNum);
+    }   
+    // stampare la griglia in base al livello
+
+    // settare la logica del gioco
+}
+
+function changeCellColor() {
+    console.log(this);
 }

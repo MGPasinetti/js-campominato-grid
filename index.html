@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,10 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <!-- logo + title + levels-input + play-btn -->
+    <!-- <header>
         <div>
             <img src="" alt="Boolean-logo">
             <h1>Campo Minato</h1>
@@ -30,15 +31,40 @@
     </header>
 
     <main>
-        <!-- grid with numbers -->
     </main>
 
     <footer>
-        <!-- Made by Boolean -->
         <span>Made with &hearts; by <a href="#!">Boolean</a></span>
+    </footer>  -->
+
+    <header>
+        <h1>Campo Minato</h1>
+
+        <label for="level">Livello:</label>
+        <select name="level" id="level">
+            <option value="0">Facile</option>
+            <option value="1">Medio</option>
+            <option value="2">Difficile</option>
+        </select>
+
+        <button id="play">Gioca</button>
+    </header>
+
+    <main>
+        <div class="grid">
+            <h2>Questo gioco è una simulazione di campo minato semplificato</h2>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            Made by us
+        </div>
     </footer>
-    
+
 
     <script src="script.js"></script>
 </body>
+
 </html>

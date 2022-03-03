@@ -6,7 +6,7 @@
 }
 
 /* HEADER */
-header {
+/* header {
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -27,11 +27,11 @@ header #difficulty {
 
 header #play {
     padding: 0 1.5rem;
-}
+} */
 
 
 /* MAIN */
-main {
+/* main {
     background-color: #7FFFD4;
     height: calc(100vh - 85.05px - 46.4px);
     display: flex;
@@ -40,15 +40,13 @@ main {
 }
 
 .grid {
-    width: 30rem;  /*FIXME: in js*/
+    width: 30rem;  
     display: flex;
     flex-wrap: wrap;
     font-weight: 600;
 }
 
 .box {
-    width: 3rem;
-    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +54,75 @@ main {
     border: 1px solid black;
 }
 
+.box-100 {
+    width: 3rem;
+    height: 3rem;
+}
+
+.box-81 {
+    width: 3,33rem;
+    height: 3,33rem;
+}
+
+.box-49 {
+    width: 4,3rem;
+    height: 4,3rem;
+} */
+
 /* FOOTER */
+/* footer {
+    background-color: white;
+    font-size: 13px;
+    padding: 1rem 6rem;
+} */
+
+body {
+    background-color: #7FFFD4;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    height: calc(100vh - 85.05px - 46.4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
+
+.grid h2 {
+    text-align: center;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
 footer {
     background-color: white;
     font-size: 13px;
